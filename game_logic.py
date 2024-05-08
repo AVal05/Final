@@ -14,6 +14,10 @@ class MAIN:
     def __init__(self):
         self.goblin = GOBLIN() 
         self.coin = COIN() #Creates an instance of coin and goblin
+    
+    def init_game(self):
+        self.goblin = GOBLIN() #Resets the goblin
+        self.coin = COIN() #Resets the coin
 
     def update(self, GAME_STATE):
         self.goblin.move_goblin() #Updates position of goblin
@@ -144,7 +148,7 @@ def game_state_gameover(GAME_STATE, event):
         mouse_pos = event.pos
         if play_again_rect.collidepoint(mouse_pos): #If mouse presses play again button, game starts again
             GAME_STATE = 'RUNNING'
-            main_game = MAIN()
+            main_game.init_game() #Resets game to initial state when playing again
         elif quit_rect.collidepoint(mouse_pos): #If mouse presses quit button, exits the game
             pygame.quit()
             sys.exit()

@@ -62,3 +62,12 @@ wops:0
 ????:2
 dfasdgiaw04501:4
 IM DONE!!!!:8
+woops:2
+huh?:2
+hi:9
+hello:9
+hello:9
+what?:0
+huh?:0
+hi:0
+okay:4
